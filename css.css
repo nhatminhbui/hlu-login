@@ -4,6 +4,7 @@
 * {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 :root {
@@ -20,9 +21,6 @@ body {
   place-items: center;
   width:100%;
   height:100%;
-  transform: translate(calc(-0% + 8px * var(--x)),
-                       calc(-0% + 5px * var(--y)));
-  transition: transform 0.1s;
 }
 
 .image {
@@ -30,8 +28,8 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     position: absolute;
-    width:115%;
-    height:115%;
+    width: 115%;
+    height: 115%;
     background-size: calc(100% + 0px);
     transform: translate(calc(-0% + 8px * var(--x)),
                          calc(-0% + 5px * var(--y)));
@@ -44,13 +42,21 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     position: absolute;
-    width:115%;
-    height:115%;
+    width: 115%;
+    height: 115%;
     background-size: calc(100% + 0px);
     transform: translate(calc(-0% + 9px * var(--x)),
                          calc(-0% + 6px * var(--y)));
     transition: transform 2s;
     z-index: 0;
+}
+
+.title {
+    position: relative;
+    transform: translate(calc(-0% + 7px * var(--x)),
+                     calc(-0% + 4px * var(--y)));
+    transition: transform 0.1s;
+    z-index: 5;
 }
 
 .title span {
